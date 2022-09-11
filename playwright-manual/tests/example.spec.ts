@@ -3,16 +3,17 @@ import { test, expect } from "@playwright/test";
 const url = "https://playwright.dev/";
 
 test.describe("Playwright", () => {
-  test("First test", async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto("/");
+  });
 
+  test("First test", async ({ page }) => {
     const text = page.locator("span", { hasText: "Playwright" });
 
     await expect(text).toHaveText("Playwright");
   });
 
   test("Go to Docs page", async ({ page }) => {
-    await page.goto("/");
     await page
       .locator("a", {
         hasText: "Get started",
