@@ -1,0 +1,16 @@
+{
+  "name": "playwright-manual",
+  "version": "1.0.0",
+  "description": "manual playwright",
+  "main": "index.js",
+  "author": "shammlo",
+  "license": "MIT",
+
+  "scripts": {
+    
+    "test": "playwright test --config=playwright.config.ts --project=Chrome"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.25.2"
+  }
+}
