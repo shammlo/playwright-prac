@@ -7,8 +7,7 @@
   "license": "MIT",
 
   "scripts": {
-    
-    "test": "playwright test --config=playwright.config.ts --project=Chrome"
+    "test": "clear && playwright test --config=playwright.config.ts --project=Chrome"
   },
   "devDependencies": {
     "@playwright/test": "^1.25.2"
