@@ -2,6 +2,8 @@ import { devices, PlaywrightTestConfig } from "@playwright/test";
 const config: PlaywrightTestConfig = {
   use: {
     baseURL: "https://playwright.dev",
+    headless: true,
+    trace: "on-first-retry",
   },
 
   projects: [
@@ -18,7 +20,8 @@ const config: PlaywrightTestConfig = {
       use: { ...devices["Desktop Safari"] },
     },
   ],
-
-  retries: 1,
+  // workers: 5,
+  fullyParallel: true,
+  retries: 0,
 };
 export default config;
