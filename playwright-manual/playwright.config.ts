@@ -2,7 +2,7 @@ import { devices, PlaywrightTestConfig } from "@playwright/test";
 const config: PlaywrightTestConfig = {
   use: {
     baseURL: "https://playwright.dev",
-    headless: true,
+    headless: false,
     trace: "on-first-retry",
   },
 
