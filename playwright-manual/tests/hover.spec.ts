@@ -9,7 +9,7 @@ test.describe("Hover on an element", () => {
     const user3 = page.locator("h5", {
       hasText: "name: user3",
     });
-    await page.locator('//div[@class="figure"]').first().hover();
+    await page.locator('//div[@class="figure2"]').first().hover();
 
     await expect(user1).toBeVisible();
 
